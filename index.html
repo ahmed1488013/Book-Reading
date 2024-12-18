@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadEasy - E-Book Reader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="brand-name">ReadEasy</h1>
+            <div class="controls">
+                <label for="font-size">Font Size:</label>
+                <select id="font-size" onchange="adjustFontSize()">
+                    <option value="18px">18px</option>
+                    <option value="20px">20px</option>
+                    <option value="22px">22px</option>
+                    <option value="24px">24px</option>
+                </select>
+
+                <label for="background-color">Background:</label>
+                <select id="background-color" onchange="adjustBackgroundColor()">
+                    <option value="#FFFFFF">White</option>
+                    <option value="#FAF3E0">Cream</option>
+                </select>
+            </div>
+        </header>
+
+        <main>
+            <section class="book-content">
+                <p id="book-text">
+                    Welcome to ReadEasy. Here, you can enjoy your favorite books with ultimate comfort. Customize the reading experience to match your needs. Choose your preferred font size and background color for an optimal reading journey. Dive into your book and let your imagination take over.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 ReadEasy. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

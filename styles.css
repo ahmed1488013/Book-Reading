@@ -1,0 +1,142 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and container */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+  color: #2E2E2E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Main container */
+.container {
+  background: linear-gradient(135deg, #FAF3E0, #E0F7FA);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 1200px;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: background-color 0.5s ease;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #87CEEB;
+}
+
+.brand-name {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #673AB7;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 1s ease-out;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.controls select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #87CEEB;
+  font-size: 16px;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+
+.controls select:hover {
+  transform: scale(1.05);
+}
+
+/* Main content area */
+main {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  animation: slideUp 1s ease-out;
+}
+
+/* Book content section */
+.book-content {
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: justify;
+  transition: font-size 0.3s ease, background-color 0.5s ease;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #673AB7;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      padding: 15px;
+  }
+
+  .controls {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .book-content {
+      font-size: 16px;
+  }
+}
